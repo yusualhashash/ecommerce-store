@@ -20,7 +20,7 @@ interface OrderPageProps {
 }
 
 export default async function OrderPage({ params, searchParams }: OrderPageProps) {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   const {
     data: { session },
