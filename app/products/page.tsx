@@ -8,8 +8,9 @@ interface ProductsPageProps {
 }
 
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
-  const { category } = searchParams
-  const supabase = createClient()
+  // Await searchParams before destructuring
+  const { category } = await Promise.resolve(searchParams)
+  const supabase = await createClient()
 
   let title = "All Products"
   let description = "Browse our complete collection of products"
@@ -26,9 +27,9 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   }
 
   return (
-    <div className="container py-12">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">{title}</h1>
+    <div className="container py-12 px-2 ">
+      <div className="mb-8 px-2">
+        <h1 className="text-3xl font-bold  mb-2">{title}</h1>
         <p className="text-muted-foreground">{description}</p>
       </div>
 
@@ -36,4 +37,3 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
     </div>
   )
 }
-
