@@ -4,17 +4,14 @@ import { createClient } from "@/utils/supabase/server"
 import { cookies } from "next/headers"
 import { revalidatePath } from "next/cache"
 
-// Update the signOut function to handle missing sessions gracefully
 export async function signOut() {
   try {
-    const supabase = createClient()
+    const supabase = await createClient()
 
-    // Get the current session first
     const {
       data: { session },
     } = await supabase.auth.getSession()
 
-    // Only attempt to sign out if there's an active session
     if (session) {
       const { error } = await supabase.auth.signOut()
       if (error) {
@@ -22,15 +19,13 @@ export async function signOut() {
       }
     }
 
-    // Clear auth cookies regardless of session status
-    const cookieStore = cookies()
+    const cookieStore = await cookies()
     cookieStore.getAll().forEach((cookie) => {
       if (cookie.name.includes("supabase") || cookie.name.includes("auth")) {
         cookieStore.delete(cookie.name)
       }
     })
 
-    // Revalidate all paths to ensure fresh data
     revalidatePath("/", "layout")
 
     return { success: true }
