@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 
 export default async function OrdersPage() {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   const {
     data: { session },
