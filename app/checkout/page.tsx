@@ -3,7 +3,7 @@ import { createClient } from "@/utils/supabase/server"
 import { CheckoutForm } from "@/components/store/checkout-form"
 
 export default async function CheckoutPage() {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   const {
     data: { session },
