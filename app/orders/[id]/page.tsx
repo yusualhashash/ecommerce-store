@@ -61,7 +61,7 @@ export default async function OrderPage({ params, searchParams }: OrderPageProps
     .eq("order_id", order.id)
 
   return (
-    <div className="container py-12">
+    <div className="container py-12 px-4 md:px-6 sm:px-8 ">
       <div className="flex justify-between items-center mb-6">
         <Button asChild variant="ghost" className="pl-0">
           <Link href="/orders">

@@ -44,7 +44,7 @@ export default async function OrdersPage() {
   }
 
   return (
-    <div className="container py-12">
+    <div className="container py-12 px-4 md:px-6 sm:px-8 ">
       <h1 className="text-3xl font-bold mb-8">My Orders</h1>
       <div className="space-y-6">
         {orders.map((order) => (
