@@ -20,7 +20,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined)
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([])
   const { toast } = useToast()
-  
+
   // Ref to track toast locks per product id to prevent duplicate notifications
   const toastLockRef = useRef<Record<string, boolean>>({})
 
@@ -82,8 +82,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }
 
   const removeItem = (productId: string) => {
-
-
     setItems((prevItems) => prevItems.filter((item) => item.product.id !== productId))
 
     // If cart is empty after removal, clear localStorage
@@ -97,11 +95,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       removeItem(productId)
       return
     }
-    setItems((prevItems) =>
-      prevItems.map((item) =>
-        item.product.id === productId ? { ...item, quantity } : item
-      )
-    )
+    setItems((prevItems) => prevItems.map((item) => (item.product.id === productId ? { ...item, quantity } : item)))
   }
 
   const clearCart = () => {
@@ -141,3 +135,4 @@ export function useCart() {
   }
   return context
 }
+

@@ -65,10 +65,13 @@ export async function createOrder(items: CartItem[], total: number) {
   } = await regularClient.auth.getSession()
 
   if (!session) {
+    console.error("Create order failed: No active session")
     return { success: false, error: "You must be logged in to place an order" }
   }
 
   try {
+    console.log("Creating order for user:", session.user.id, "with total:", total)
+
     // Use admin client for database operations
     const adminClient = createAdminClient()
 
@@ -89,8 +92,11 @@ export async function createOrder(items: CartItem[], total: number) {
     }
 
     if (!order) {
+      console.error("Order was created but no data was returned")
       return { success: false, error: "Order was created but no data was returned" }
     }
+
+    console.log("Order created successfully with ID:", order.id)
 
     // Create order items
     const orderItems = items.map((item) => ({
@@ -121,6 +127,7 @@ export async function createOrder(items: CartItem[], total: number) {
     }
 
     revalidatePath("/orders")
+    console.log("Order process completed successfully")
     return { success: true, orderId: order.id }
   } catch (error) {
     console.error("Checkout error:", error)

@@ -116,9 +116,6 @@ dependencies:
   embla-carousel-react:
     specifier: 8.5.1
     version: registry.npmjs.org/embla-carousel-react@8.5.1(react@19.1.0)
-  fs:
-    specifier: latest
-    version: registry.npmjs.org/fs@0.0.1-security
   input-otp:
     specifier: 1.4.1
     version: registry.npmjs.org/input-otp@1.4.1(react-dom@19.1.0)(react@19.1.0)
@@ -131,9 +128,6 @@ dependencies:
   next-themes:
     specifier: ^0.4.6
     version: registry.npmjs.org/next-themes@0.4.6(react-dom@19.1.0)(react@19.1.0)
-  path:
-    specifier: latest
-    version: registry.npmjs.org/path@0.12.7
   react:
     specifier: ^19
     version: registry.npmjs.org/react@19.1.0
@@ -2703,12 +2697,6 @@ packages:
     version: 4.3.7
     dev: false
 
-  registry.npmjs.org/fs@0.0.1-security:
-    resolution: {integrity: sha512-3XY9e1pP0CVEUCdj5BmfIZxRBTSDycnbqhIOGec9QYtmVH2fbLpj86CFWkrNOkt/Fvty4KZG5lTglL9j/gJ87w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/fs/-/fs-0.0.1-security.tgz}
-    name: fs
-    version: 0.0.1-security
-    dev: false
-
   registry.npmjs.org/fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz}
     name: fsevents
@@ -2766,12 +2754,6 @@ packages:
     engines: {node: '>= 0.4'}
     dependencies:
       function-bind: registry.npmjs.org/function-bind@1.1.2
-
-  registry.npmjs.org/inherits@2.0.3:
-    resolution: {integrity: sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz}
-    name: inherits
-    version: 2.0.3
-    dev: false
 
   registry.npmjs.org/input-otp@1.4.1(react-dom@19.1.0)(react@19.1.0):
     resolution: {integrity: sha512-+yvpmKYKHi9jIGngxagY9oWiiblPB7+nEO75F2l2o4vs+6vpPZZmUl4tBNYuTCvQjhvEIbdNeJu70bhfYP2nbw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/input-otp/-/input-otp-1.4.1.tgz}
@@ -3073,15 +3055,6 @@ packages:
       lru-cache: registry.npmjs.org/lru-cache@10.4.3
       minipass: registry.npmjs.org/minipass@7.1.2
 
-  registry.npmjs.org/path@0.12.7:
-    resolution: {integrity: sha512-aXXC6s+1w7otVF9UletFkFcDsJeO7lSZBPUQhtb5O0xJe8LtYhj/GxldoL09bBj9+ZmE2hNoHqQSFMN5fikh4Q==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/path/-/path-0.12.7.tgz}
-    name: path
-    version: 0.12.7
-    dependencies:
-      process: registry.npmjs.org/process@0.11.10
-      util: registry.npmjs.org/util@0.10.4
-    dev: false
-
   registry.npmjs.org/picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz}
     name: picocolors
@@ -3196,13 +3169,6 @@ packages:
       nanoid: registry.npmjs.org/nanoid@3.3.11
       picocolors: registry.npmjs.org/picocolors@1.1.1
       source-map-js: registry.npmjs.org/source-map-js@1.2.1
-
-  registry.npmjs.org/process@0.11.10:
-    resolution: {integrity: sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/process/-/process-0.11.10.tgz}
-    name: process
-    version: 0.11.10
-    engines: {node: '>= 0.6.0'}
-    dev: false
 
   registry.npmjs.org/prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz}
@@ -3812,14 +3778,6 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz}
     name: util-deprecate
     version: 1.0.2
-
-  registry.npmjs.org/util@0.10.4:
-    resolution: {integrity: sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/util/-/util-0.10.4.tgz}
-    name: util
-    version: 0.10.4
-    dependencies:
-      inherits: registry.npmjs.org/inherits@2.0.3
-    dev: false
 
   registry.npmjs.org/vaul@0.9.9(@types/react-dom@19.1.1)(@types/react@19.1.0)(react-dom@19.1.0)(react@19.1.0):
     resolution: {integrity: sha512-7afKg48srluhZwIkaU+lgGtFCUsYBSGOl8vcc8N/M3YQlZFlynHD15AE+pwrYdc826o7nrIND4lL9Y6b9WWZZQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/vaul/-/vaul-0.9.9.tgz}

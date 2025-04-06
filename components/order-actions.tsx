@@ -64,7 +64,7 @@ export function OrderActions({ orderId, currentStatus, isAdmin = false }: OrderA
       }
 
       toast({
-        variant: "success",
+        variant: "default",
         title: "Order deleted",
         description: "The order has been successfully deleted",
       })
@@ -109,7 +109,7 @@ export function OrderActions({ orderId, currentStatus, isAdmin = false }: OrderA
       }
 
       toast({
-        variant: "success",
+        variant: "default",
         title: "Order updated",
         description: `Order status changed to ${status}`,
       })

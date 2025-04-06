@@ -39,8 +39,12 @@ export function CartDrawer() {
       return
     }
 
-    router.push("/checkout")
+    // Close the drawer first, then navigate
     setIsOpen(false)
+    // Use a slight delay to ensure the drawer closes properly before navigation
+    setTimeout(() => {
+      router.push("/checkout")
+    }, 100)
   }
 
   return (

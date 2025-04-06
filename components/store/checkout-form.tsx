@@ -35,10 +35,13 @@ export function CheckoutForm({ userId }: CheckoutFormProps) {
     setError(null)
 
     try {
+      console.log("Creating order with items:", items.length, "and total:", total)
+
       // Use the server action to create the order
       const result = await createOrder(items, total)
 
       if (!result.success) {
+        console.error("Order creation failed:", result.error)
         setError(result.error || "Failed to create order")
         toast({
           variant: "destructive",
@@ -58,7 +61,9 @@ export function CheckoutForm({ userId }: CheckoutFormProps) {
 
       // Clear cart and redirect
       clearCart()
-      router.push(`/orders/${result.orderId}?success=true`)
+
+      // Use window.location for a hard redirect to ensure page refresh
+      window.location.href = `/orders/${result.orderId}?success=true`
     } catch (error) {
       console.error("Checkout error:", error)
       const errorMessage = error instanceof Error ? error.message : "An unknown error occurred during checkout"

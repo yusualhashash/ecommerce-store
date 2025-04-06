@@ -83,7 +83,7 @@ export function Navbar() {
       toast({
         title: "Signed out successfully",
         description: "You have been logged out",
-        variant: "success",
+        variant: "default",
       })
 
       // Force a hard refresh to clear any cached state

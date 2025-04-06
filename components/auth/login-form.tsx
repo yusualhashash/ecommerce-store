@@ -11,7 +11,11 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 
-export function LoginForm() {
+interface LoginFormProps {
+  redirectPath?: string
+}
+
+export function LoginForm({ redirectPath }: LoginFormProps) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState<string | null>(null)
@@ -35,7 +39,13 @@ export function LoginForm() {
       return
     }
 
-    router.push("/")
+    // If there's a redirect path, use it
+    if (redirectPath) {
+      router.push(`/${redirectPath}`)
+    } else {
+      router.push("/")
+    }
+
     router.refresh()
   }
 

@@ -68,7 +68,7 @@ export default async function AdminDashboard() {
   const salesData = monthlySales || generateFallbackMonthlySales()
 
   // Format the chart data
-  const chartData = (salesData as { month: string, total: number }[]).map((item) => ({
+  const chartData = (salesData as { month: string; total: number }[]).map((item) => ({
     name: new Date(item.month).toLocaleDateString("en-US", { month: "short" }),
     total: item.total,
   }))

@@ -7,14 +7,13 @@ import { CartProvider } from "@/hooks/use-cart"
 import { Navbar } from "@/components/store/navbar"
 import { Footer } from "@/components/store/footer"
 import { Toaster } from "@/components/ui/toaster"
-import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "E-commerce Store",
   description: "A modern e-commerce store built with Next.js and Supabase",
-    generator: 'v0.dev'
+  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -24,7 +23,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <CartProvider>
@@ -40,6 +38,8 @@ export default function RootLayout({
     </html>
   )
 }
+
+import "./globals.css"
 
 
 
