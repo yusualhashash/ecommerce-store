@@ -9,7 +9,7 @@ interface ProductPageProps {
 }
 
 export default async function AdminProductPage({ params }: ProductPageProps) {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   if (params.id === "new") {
     return (
