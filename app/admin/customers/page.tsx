@@ -11,7 +11,7 @@ interface Customer {
 }
 
 export default async function AdminCustomersPage() {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   // Get users with role 'user'
   const { data: users } = await supabase.from("users").select("id, email, created_at").eq("role", "user")
